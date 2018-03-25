@@ -1,3 +1,1 @@
-nohup ./root/game-server -w koolshare.github.io -c /root/config.json > z.log 2>&1 &
-
-
+/etc/koolgame-docker/game-server -w koolshare.github.io -c /etc/koolgame-docker/config.json

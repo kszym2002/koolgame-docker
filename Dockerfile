@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install git -y && \
 WORKDIR /etc/koolgame-docker
 
 CMD chmod 777 game-server && \
-    sed -i "s|\"server_port\": \"8080\"|\"server_port\": \"${server_port}\"|"               /etc/koolgame-docker/config.json && \
+    sed -i "s|\"server_port\": 8080|\"server_port\": \ ${server_port}|"               /etc/koolgame-docker/config.json && \
     sed -i "s|\"password\": \"m\"|\"password\": \"${password}\"|"               /etc/koolgame-docker/config.json && \
 	sed -i "s|\"timeout\": 600|\"timeout\": ${timeout}|"               /etc/koolgame-docker/config.json && \
 	sed -i "s|\"method\": chacha20-ietf|\"method\": ${method}|"               /etc/koolgame-docker/config.json && \

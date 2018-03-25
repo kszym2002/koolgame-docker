@@ -8,7 +8,9 @@ ENV server_port=8080             \
     method=chacha20-ietf          \
     fast_open=true                
 	
-RUN apt-get update && apt-get install git -y \ 
+RUN set -ex \
+    && apt-get update \
+	&& apt-get install git -y \ 
     &&   cd /etc  \
     &&  git clone https://github.com/kszym2002/koolgame-docker.git \
     &&  cd koolgame-docker  \

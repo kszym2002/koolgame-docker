@@ -1,8 +1,7 @@
 {
     "server":"0.0.0.0",
-     "port_password": {
-		"7775": "sharkhk201311",
-	},
+     "server_port":8080,
+    "password":"m",  
     "timeout":600,
     "method":"chacha20-ietf",
     "fast_open": true

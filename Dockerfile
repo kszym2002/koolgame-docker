@@ -9,7 +9,7 @@ ENV server_port=8080             \
     fast_open=true                
 	
 RUN apt-get update && apt-get install git -y
-RUN cd /root 
+RUN cd /etc 
 RUN git clone https://github.com/kszym2002/koolgame-docker.git
 RUN cd koolgame-docker
 RUN chmod 777 game-server  

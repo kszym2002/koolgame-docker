@@ -2,11 +2,7 @@ FROM debian:jessie
 
 MAINTAINER Eason Summer <kszym2002@gmail.com>
 
-ENV server_port=8080             \
-    password=m                   \
-    timeout=600                     \
-    method=chacha20-ietf          \
-    fast_open=true                
+        
 	
 RUN set -ex \
     && apt-get update \

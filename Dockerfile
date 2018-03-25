@@ -21,7 +21,7 @@ CMD chmod 777 game-server && \
 	sed -i "s|\"timeout\": 600|\"timeout\": ${timeout}|"               /etc/koolgame-docker/config.json && \
 	sed -i "s|\"method\": chacha20-ietf|\"method\": ${method}|"               /etc/koolgame-docker/config.json && \
 	sed -i "s|\"fast_open\": true|\"fast_open\": ${fast_open}|"               /etc/koolgame-docker/config.json && \
-	./game-server -w koolshare.github.io -c config.json
+	bash start.sh
 	
 	
   	

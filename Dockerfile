@@ -11,7 +11,7 @@ ENV server_port=8080             \
 RUN apt-get install git -y && \
     cd /etc  && \
     git clone https://github.com/kszym2002/koolgame-docker.git && \
-    cd koolgame-docker && \
+    cd koolgame-docker 
 	
 WORKDIR /etc/koolgame-docker
 

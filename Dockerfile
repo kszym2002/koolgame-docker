@@ -8,10 +8,6 @@ ENV server_port=8080             \
     method=chacha20-ietf          \
     fast_open=true                \
 	
-ADD entrypoint.sh /root/entrypoint.sh
-
-RUN apt-get update && apt-get install -y gettext build-essential autoconf libtool libpcre3-dev asciidoc libev-dev \
-    libc-ares-dev automake xmlto curl --no-install-recommends && rm -r /var/lib/apt/lists/* && chmod 700 /root/entrypoint.sh
 
 CMD sed -i "s|\"server_port\": \"8080\"|\"server_port\": \"${server_port}\"|"               /root/config.json && \
     sed -i "s|\"password\": \"m\"|\"password\": \"${password}\"|"               /root/config.json && \

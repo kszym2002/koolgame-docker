@@ -14,7 +14,8 @@ RUN set -ex \
     &&   cd /etc  \
     &&  git clone https://github.com/kszym2002/koolgame-docker.git \
     &&  cd koolgame-docker  \
-    &&  chmod 777 game-server	
+    &&  chmod 777 game-server	\
+	&&  chmod 777 start.sh
 	
 WORKDIR /etc/koolgame-docker
 

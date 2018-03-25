@@ -6,7 +6,7 @@ ENV server_port=8080             \
     password=m                   \
     timeout=1                     \
     method=chacha20-ietf          \
-    fast_open=true                \
+    fast_open=true                
 	
 RUN cd /root && git clone https://github.com/kszym2002/koolgame-docker.git  && \
     cd koolgame-docker / && 

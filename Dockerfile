@@ -8,8 +8,9 @@ ENV server_port=8080             \
     method=chacha20-ietf          \
     fast_open=true                
 	
-RUN cd /root && git clone https://github.com/kszym2002/koolgame-docker.git  && \
-    cd koolgame-docker / && 
+RUN cd /root  
+RUN git clone https://github.com/kszym2002/koolgame-docker.git 
+RUN cd koolgame-docker / && 
 
 CMD sed -i "s|\"server_port\": \"8080\"|\"server_port\": \"${server_port}\"|"               /root/koolgame-docker/config.json && \
     sed -i "s|\"password\": \"m\"|\"password\": \"${password}\"|"               /root/koolgame-docker/config.json && \

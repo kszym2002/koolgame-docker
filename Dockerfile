@@ -11,12 +11,12 @@ ENV server_port=8080             \
 RUN apt-get update && apt-get install git -y && \
     cd /etc  && \
     git clone https://github.com/kszym2002/koolgame-docker.git && \
-    cd koolgame-docker 
+    cd koolgame-docker    && \
+    chmod 777 game-server	
 	
 WORKDIR /etc/koolgame-docker
 
-CMD chmod 777 game-server && \
-	bash start.sh
+CMD /etc/koolgame-docker/start.sh
 	
 	
   	

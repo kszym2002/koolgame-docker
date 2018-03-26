@@ -1,8 +1,0 @@
-{
-    "server":"0.0.0.0",
-     "server_port":8080,
-    "password":"m",  
-    "timeout":600,
-    "method":"chacha20-ietf",
-    "fast_open": true
-}
